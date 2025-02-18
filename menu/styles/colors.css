@@ -1,0 +1,22 @@
+:root {
+    --primary-color: #ff0000; /* Default YouTube Red */
+    --secondary-color: #ff8800; /* New Secondary Color */
+    --gradient-bg: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+}
+
+body {
+    background: var(--primary-color) !important;
+    color: var(--primary-color);
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    background: var(--secondary-color);
+    z-index: -1;
+}
